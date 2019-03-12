@@ -2,19 +2,20 @@ header {
   width: 100vw;
   text-align: center;
   margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-bottom: 3vh;
 }
 
 h1 {
-  font-family: 'Palatino', serif;
+  font-family: 'Fira Mono', sans-serif;
   font-variant-caps: small-caps;
   font-style: italic;
   font-weight: lighter;
-  text-decoration: double underline;
-  margin-top: 0.2rem;
+  text-decoration: underline;
+  margin-top: 2vh;
 }
 
 h2 {
+  margin-top: 5vh;
   font-family: 'Fira Mono', sans-serif;
 }
 
