@@ -1,0 +1,33 @@
+<!doctype html>
+<title>Platform 3.14 - Dashboard</title>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+  </head>
+  <body>
+    <header>
+      <p class="header-logo">🚂🚃🚃</p>
+      <h1>Platform 3.14</h1>
+    </header>
+    <div id="app">
+      <div class="junction"
+           v-for="junction of junctions">
+        <h2>
+          {{ junction.name }}
+        </h2>
+        <div class="route-list">
+          <button class="route"
+                  v-for="route of junction.routes"
+                  v-bind:class="{ selected: route.isSelected }"
+                  v-on:click="selectRoute(junction.name, route.name)">
+            {{ route.name }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
